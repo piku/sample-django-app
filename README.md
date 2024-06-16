@@ -31,6 +31,11 @@ piku shell
 ./manage.py createsuperuser
 ```
 
+### Navigate to the admin page
+Since debug hasn't been set, the default page won't work.  You can validate the deployment works by hitting the admin page
+
+\<fqdn\>/admin
+
 # Piku features utilized
 This app utilizes several of Piku's ```Procfile``` features
 ```
