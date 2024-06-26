@@ -1,0 +1,1 @@
+python manage.py clearsessions -v 3
