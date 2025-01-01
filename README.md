@@ -37,19 +37,21 @@ Since debug hasn't been set, the default page won't work.  You can validate the 
 \<fqdn\>/admin
 
 # Piku features utilized
+
+## Procfile
 This app utilizes several of Piku's ```Procfile``` features
 ```
 wsgi: pikupostgres.wsgi:application
 release: ./bin/stage_release.sh
 cron: 0 0 * * * ./bin/uwsgi_cron_midnight.sh
 ```
-## wsgi
+### wsgi
 Runs this python app as a WSGI process
 
-## release
+### release
 Each time you push your code, Piku will run a 'release' cycle and run this code.  ```./bin/stage_release.sh``` only runs Django's collectstatic function, but you can add more
 
-## cron
+### cron
 Piku uses UWSGI to schedule Cron jobs.  ```./bin/uwsgi_cron_midnight.sh``` runs a Django clearsessions command every day at 0:00 (midnight)
 
 ## NGINX static file mapping
