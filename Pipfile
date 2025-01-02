@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "<6"
-psycopg = {extras = ["binary", "pool"], version = "*"}
+django = "==5.1.4"
+psycopg = {extras = ["pool", "binary"], version = "==3.2.3"}
 
 [dev-packages]
 
